@@ -220,7 +220,25 @@ v2.0 基于 3 次实战测试反馈，做了两个方向的大改：
 
 ## 使用方式
 
-将 `SKILL.md` 添加到你的 AI 编程助手（如 Claude Code、CodeBuddy 等）的 Skill 目录中，然后：
+### GitHub Copilot（推荐）
+
+本仓库已内置 GitHub Copilot 配置，**Fork 或克隆本仓库后即可直接使用**，无需任何手动配置。
+
+**在 GitHub Copilot Chat 中输入触发词：**
+
+```
+> 用张雪峰的视角帮我分析这个专业选择
+> 张雪峰会怎么看这个职业方向？
+> 切换到张雪峰，我孩子要填志愿了
+```
+
+Copilot 会自动读取 `.github/copilot-instructions.md`，加载 `SKILL.md` 中的完整规则，以张雪峰的身份直接回应。
+
+> **原理**：`.github/copilot-instructions.md` 是 GitHub Copilot 的[仓库级自定义指令](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot)，Copilot Chat 在该仓库内会自动加载此文件的内容作为系统提示。`.github/workflows/copilot-setup-steps.yml` 则为 Copilot 编码智能体配置运行环境。
+
+### 其他 AI 编程助手（Claude Code、CodeBuddy 等）
+
+将 `SKILL.md` 添加到对应工具的 Skill 目录中，然后使用相同的触发词：
 
 ```
 > 用张雪峰的视角帮我分析这个专业选择
